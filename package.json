@@ -2,7 +2,7 @@
   "name": "github-follower",
   "version": "1.0.0",
   "description": "Application used to follow trending GitHub repositories",
-  "main": "index.js",
+  "main": "dist/server.js",
   "scripts": {
     "build:server": "./node_modules/.bin/webpack --config config/webpack.prod.server.js",
     "build:client": "./node_modules/.bin/webpack --config config/webpack.prod.client.js",
