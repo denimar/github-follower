@@ -11,7 +11,7 @@
     "server:prod": "development=false babel-node server/main.js --exec babel-node",
     "server:debug": "development=true babel-node --inspect-brk server/main.js --exec babel-node",
     "server": "npm run server:dev",
-    "start": "npm run server"
+    "start": "node dist/server.js"
   },
   "author": "Denimar de Moraes",
   "license": "ISC",
