@@ -1,5 +1,5 @@
 {
-  "name": "GitHubFollower",
+  "name": "github-follower",
   "version": "1.0.0",
   "description": "Application used to follow trending GitHub repositories",
   "main": "index.js",
