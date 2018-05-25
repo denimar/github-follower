@@ -4,14 +4,14 @@
   "description": "Application used to follow trending GitHub repositories",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server --config config/webpack.config.js",
     "build:server": "./node_modules/.bin/webpack --config config/webpack.prod.server.js",
     "build:client": "./node_modules/.bin/webpack --config config/webpack.prod.client.js",
     "build": "npm run build:server && npm run build:client",
     "server:dev": "development=true nodemon server/main.js --exec babel-node",
     "server:prod": "development=false babel-node server/main.js --exec babel-node",
     "server:debug": "development=true babel-node --inspect-brk server/main.js --exec babel-node",
-    "server": "npm run server:dev"
+    "server": "npm run server:dev",
+    "start": "npm run server",
   },
   "author": "Denimar de Moraes",
   "license": "ISC",
