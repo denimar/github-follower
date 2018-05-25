@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Application used to follow trending GitHub repositories",
   "main": "dist/server.js",
+  "engines": {
+    "node": "8.9.1"
+  },  
   "scripts": {
     "build:server": "./node_modules/.bin/webpack --config config/webpack.prod.server.js",
     "build:client": "./node_modules/.bin/webpack --config config/webpack.prod.client.js",
@@ -23,6 +26,7 @@
     "webpack-hot-middleware": "^2.21.2",
     "webpack-node-externals": "^1.7.2"
   },
+  
   "dependencies": {
     "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
