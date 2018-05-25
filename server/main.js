@@ -2,13 +2,19 @@ import DatabaseConnection from './database/Connection'
 const express = require('express');
 const app = express();
 const debug = require('debug')('app:server')
-const port = process.env.PORT || 49048;
+const port = process.env.PORT || 3000;
 const webpack = require('webpack')
 const webpackConfig = require('../config/webpack.config')
 const path = require('path');
 import Routes from './Routes'
 import cors from 'cors'
 const loadJsonFile = require('load-json-file');
+
+console.log('-------------------------------')
+console.log('-------------------------------')
+console.log(port)
+console.log('-------------------------------')
+console.log('-------------------------------')
 
 app.use(cors());
 
