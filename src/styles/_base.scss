@@ -1,0 +1,44 @@
+/*
+Application Settings Go Here
+------------------------------------
+This file acts as a bundler for all variables/mixins/themes, so they
+can easily be swapped out without `core.scss` ever having to know.
+
+For example:
+
+@import './variables/colors';
+@import './variables/components';
+@import './themes/default';
+*/
+//$base-color: #2D8306;  //verde
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+@import url('https://fonts.googleapis.com/css?family=Catamaran');
+@import url('https://fonts.googleapis.com/css?family=Barlow');
+
+$base-color: #18559a;
+$body-background-color: #e6e6e6;
+$main-header-height: 60px;
+$main-header-height: 60px;
+$tab-view-selector-height: 45px;
+$left-side-nav-width: 300px;
+$filter-side-nav-width: 280px;
+$font-color-button: #8c8c8c;
+$font-color-button-hover: #262626;
+$active-tabview-background-color: #f2f2f2; //#d5e4f6;
+
+* {
+  font-family: Roboto;
+  box-sizing: border-box;
+}
+
+@mixin no-select-mixin {
+  -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+      -ms-user-select: none; /* IE 10+ */
+        user-select: none; /* Standard syntax */
+}

@@ -1,0 +1,42 @@
+.repository-modal-container {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: hsl(199, 56%, 97%);
+
+  .repository-modal-toolbar {
+    padding: 4px 0px;
+    
+    .repository-new-item {
+      opacity: .7;
+      cursor: pointer;
+      font-size: 12px;        
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 2px;
+      background-color: #ebf6fa;
+      border: solid 1px #9bd4e4;
+      width: 120px;
+      border-radius: 5px;
+      float: right;
+    
+      &:hover {
+        opacity: 1;
+      }
+
+      svg {
+        font-size: 18px;        
+        margin-right: 3px;
+      }
+    }
+  }
+
+  .ui-deni-grid {
+    flex: 1;
+    width: 100%;
+    border: solid 1px #afdce9 !important;
+  }
+
+}

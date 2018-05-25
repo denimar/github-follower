@@ -1,0 +1,126 @@
+@import '../../styles/_base.scss';
+
+.tab-view-selector-container {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 10px 4px 0px 0px;
+  border-bottom: solid 1px darken($active-tabview-background-color, 14);
+  @include no-select-mixin;
+  height: $tab-view-selector-height;
+
+  .tab-view-selector {
+    display: flex;
+    flex-direction: row;
+    height: 26px;
+
+    .tab-view-selector-label {
+      color: darken($active-tabview-background-color, 24);
+      font-size: 11px;
+      font-style: italic;
+      padding: 5px 8px;
+    }
+
+    .route-view {
+      $tab-view-selector-item-border-color: darken($active-tabview-background-color, 14);//#d9d9d9;
+      border-bottom: solid 1px #d9d9d9;
+
+      .tab-view-selector-item {
+        background-color: #f2f2f2;
+        border-top: solid 1px #d9d9d9; //$tab-view-selector-item-border-color;
+        border-left: solid 1px #d9d9d9;
+        border-right: solid 1px #d9d9d9;
+        padding: 5px 6px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        color: $font-color-button;
+        cursor: pointer;
+        margin-right: 2px;
+        font-size: 11px;
+
+        &:hover {
+          color: $font-color-button-hover;
+        }
+
+      }
+
+      &.route-active {
+
+        .tab-view-selector-item {
+          outline: solid 1px #E6E6E6;
+          background-color: darken($active-tabview-background-color, 5);
+          color: darken($active-tabview-background-color, 40); //#262626;
+          font-weight: bold;
+          border-color: darken($tab-view-selector-item-border-color, 3);
+          border-bottom: solid 1px darken($active-tabview-background-color, 5) !important;
+          box-shadow: -1px -1px 4px $tab-view-selector-item-border-color;
+        }
+
+      }
+
+      &:link {text-decoration: none;}
+      &:visited {text-decoration: none;}
+      &:hover {text-decoration: none;}
+      &:active {text-decoration: none;}
+
+    }
+
+  }
+
+  .clock-container {
+    flex: 1;
+    text-align: center;
+  }
+
+  .tab-view-selector-buttons-container {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .tab-view-selector-buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 4px 8px;
+
+      svg {
+        font-size: 18px;
+        color: $font-color-button;
+        cursor: pointer;
+
+        &:hover {
+          color: $font-color-button-hover;
+        }
+      }
+
+      .tab-view-selector-button {
+        border: solid 1px #f2f2f2;
+        padding: 4px;
+        height: 36px;
+        width: 36px;
+        margin-left: 4px;
+
+        &.pressed {
+          background-color: hsl(0, 0%, 94%);
+          border-color: hsl(0, 0%, 91%);
+          border-radius: 22px;
+        }
+
+        &.view {
+          padding: 0px;
+        }
+
+        &.config {
+
+        }
+
+        &.filter {
+          display: none; //não mostrar provisóriamente
+        }
+      }
+    }
+  }
+
+}

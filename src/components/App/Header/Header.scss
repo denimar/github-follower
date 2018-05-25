@@ -1,0 +1,92 @@
+@import '../../../styles/_base.scss';
+
+// @font-face {
+//     font-family: Roboto;
+//     src: url(../../styles/fonts/Roboto/Roboto-Regular.ttf);
+// }
+
+.main-header {
+  $base-color-header: $base-color;//#2D8306; //#1c61b0 //#4990E2;
+  display: flex;
+  flex-direction: column;
+  height: $main-header-height;
+  min-height: $main-header-height;
+  @include no-select-mixin;
+
+  border-top: 1px solid #fff;
+  color: #777;
+  text-shadow: 0 1px 0 #fff;
+
+  //z-index: 999;
+  box-shadow: 1px 1px 4px #7cb1d0;
+
+  .main-header-content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 3px solid #3c80a6;
+    padding-left: 20px;
+    flex: 1;
+
+    .header-hamburger-menu {
+      cursor: pointer;
+      padding: 10px;
+      height: 44px;
+      width: 44px;
+      border: solid 1px #ffffff;
+
+      &.pressed {
+        background-color: hsl(0, 0%, 97%);
+        border-color: hsl(0, 0%, 94%);
+        border-radius: 22px;
+      }
+    }
+
+    .github-follower-logo {
+      margin-left: 20px;      
+      width: 50px;
+    }
+
+    .github-follower-title {
+      font-size: 38px;
+      margin-left: 20px;
+      margin-top: -4px;
+      color: #477EA4;
+      font-family: Barlow;
+      font-weight: bold;
+      flex: 1;
+    }
+
+    .navigation {
+      flex-direction: row;
+      display: flex;
+      display:none;
+
+      a {
+        text-decoration: none;
+        display: block;
+        padding: 8px 20px;
+        color: #e6e6e6;
+
+        &:hover {
+          background: darken($base-color-header, 2%);
+        }
+
+        &.route-active {
+          background: darken($base-color-header, 5%);
+          border-left: solid 1px darken($base-color-header, 9%);
+          border-top-left-radius: 4px;
+          border-top: solid 1px darken($base-color-header, 9%);
+          border-right: solid 1px darken($base-color-header, 9%);
+          border-top-right-radius: 4px;
+          border-bottom: solid 2px white;
+          padding: 7px 19px;
+          color: #ffffff;
+        }
+      }
+
+    }
+
+  }
+
+}

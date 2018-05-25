@@ -1,0 +1,33 @@
+@import '../../../styles/_base.scss';
+
+.main-menu-container {
+
+  .main-menu {
+    //border: solid 1px #3C80A6;
+    position: absolute;
+    left: 5px;
+    top: $main-header-height;
+    border-radius: 0 0 4px 4px;
+    font-family: Ubuntu;
+    font-size: 14px;
+    box-shadow: 0 10px 21px 0 rgba(0,0,0,.4);
+    background-color: #FAFBFB;
+
+    .main-menu-item {
+      padding: 6px 15px;
+      border-bottom: solid 1px #f1f4f4;
+      cursor: pointer;
+
+      &.with-separator {
+        border-top: 1px solid #d5dddd;
+      }
+
+      &:hover {
+        background-color: #E6E7E8;
+        color: #008cff;
+      }
+    }
+
+  }
+
+}

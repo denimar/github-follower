@@ -1,0 +1,26 @@
+@import '../../styles/_base.scss';
+
+.repository-view-viewport {
+  overflow-y: auto;
+  flex: 1;
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px #808080;    
+    -webkit-box-shadow: inset 0 0 6px #808080;
+    background-color: #e4e4e4;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: #a6a6a6;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #8c8c8c;
+  }
+
+  .repository-view-container {
+    background-color: #ffffff;
+    padding: 2px 7px 4px 7px;
+  }
+}

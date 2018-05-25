@@ -1,0 +1,7 @@
+export default {
+    COMMITS: 1,
+    OPEN_PULL_REQUESTS: 2,
+    MERGED_PULL_REQUESTS: 3,
+    OPEN_ISSUES: 4,
+    CLOSED_ISSUES: 5
+}
