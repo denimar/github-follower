@@ -1,4 +1,4 @@
-const BASE_ENDPOINTS = '/githubfollower/endpoints'
+const BASE_ENDPOINTS = 'https://github-follower.herokuapp.com'
 
 export default {
 

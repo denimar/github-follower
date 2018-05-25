@@ -10,12 +10,6 @@ import Routes from './Routes'
 import cors from 'cors'
 const loadJsonFile = require('load-json-file');
 
-console.log('-------------------------------')
-console.log('-------------------------------')
-console.log(port)
-console.log('-------------------------------')
-console.log('-------------------------------')
-
 app.use(cors());
 
 // ------------------------------------
