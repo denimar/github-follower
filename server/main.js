@@ -31,7 +31,7 @@ if (process.env.development) {
   app.use(express.static('public'))
 } else {
   app.use(express.static('dist/www'))
-s}
+}
 
 loadJsonFile('env.json').then(json => {
   app.envJSON = json
