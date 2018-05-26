@@ -4,7 +4,7 @@ Application used to follow trending GitHub repositories
 ![alt text](https://raw.githubusercontent.com/denimar/deni-react-dialog/master/deni-react-dialog.gif)
 
 
-[live](https://github-follower.herokuapp.com/#/repositories/)
+[See ti on Heroku](https://github-follower.herokuapp.com/#/repositories/)
 
 
 ## Author
