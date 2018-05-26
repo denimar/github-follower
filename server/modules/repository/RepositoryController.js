@@ -7,7 +7,6 @@ class RepositoryController {
 
   constructor(app, sequelize) {
     try {
-      console.log('0000000000000s')
       const repositoryService = new RepositoryService(sequelize);
 
       app.get(commonConstant.ENDPOINT.REPOSITORY, repositoryService.fetchAll.bind(repositoryService));
@@ -18,7 +17,7 @@ class RepositoryController {
       app.post(commonConstant.ENDPOINT.SELECTED_REPOSITORY_ADD, repositoryService.addSelected.bind(repositoryService));        
       app.post(commonConstant.ENDPOINT.SELECTED_REPOSITORY_REMOVE, repositoryService.removeSelected.bind(repositoryService));            
     } catch (error)   {
-      console.log('error aqui : ' + error)
+      console.log('error creating repository controller : ' + error)
     }
     
   }

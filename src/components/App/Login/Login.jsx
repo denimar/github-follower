@@ -64,11 +64,11 @@ class Login extends React.Component {
                     <form method="post">
                       <div className="input-container">
                         <FaUser className="field-input-icon" />
-                        <input className="field-input" type="text" placeholder="username" autoFocus={ true } ref={ (elem) => this.usernameInput = elem } />
+                        <input className="field-input" type="text" placeholder="GitHub username" autoFocus={ true } ref={ (elem) => this.usernameInput = elem } />
                       </div>
                       <div className="input-container">
                         <MdLock className="field-input-icon" />
-                        <input className="field-input" type="password" placeholder="password" ref={ (elem) => this.passwordInput = elem } />
+                        <input className="field-input" type="password" placeholder="GitHub password" ref={ (elem) => this.passwordInput = elem } />
                       </div>
                     </form>
                     <div className="login-button-container">

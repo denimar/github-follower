@@ -15,6 +15,9 @@ app.use(cors());
 // ------------------------------------
 // Apply Webpack HMR Middleware
 // ------------------------------------
+
+console.log('process.env.development -> ' + process.env.development)
+
 if (process.env.development) {
   const webpackCompiler = webpack(webpackConfig)
 
