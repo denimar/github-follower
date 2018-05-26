@@ -11,7 +11,7 @@ class Routes {
       new RepositoryController(app, sequelize)
       new VersionController(app, sequelize)      
 
-      sequelize.sync({force: true})
+      //sequelize.sync({force: true})
 
     } catch (err)   {
       console.log('Error loading server routes : ' + err);
