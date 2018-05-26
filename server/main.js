@@ -34,11 +34,11 @@ if (process.env.development) {
   }));
 
   app.use(express.static('public'))
-  console.log('------------->4444444444')
+  console.log('------------->77777777')
 } else {
-  console.log('------------->5555555555')  
+  console.log('------------->88888888888888')  
   app.use(express.static('dist/www'))
-  console.log('------------->666666666')
+  console.log('------------->88888888888')
 }
 
 loadJsonFile('env.json').then(json => {
