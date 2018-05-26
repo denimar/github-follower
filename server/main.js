@@ -12,15 +12,10 @@ const loadJsonFile = require('load-json-file');
 
 app.use(cors());
 
-console.log('------------->' + process.env.development)
-
-
 // ------------------------------------
 // Apply Webpack HMR Middleware
 // ------------------------------------
 if (process.env.development) {
-  console.log('------------->0000000')
-
   const webpackCompiler = webpack(webpackConfig)
 
   // Step 2: Attach the dev middleware to the compiler & the server
@@ -34,12 +29,9 @@ if (process.env.development) {
   }));
 
   app.use(express.static('public'))
-  console.log('------------->77777777')
 } else {
-  console.log('------------->88888888888888')  
   app.use(express.static('dist/www'))
-  console.log('------------->88888888888')
-}
+s}
 
 loadJsonFile('env.json').then(json => {
   app.envJSON = json

@@ -6,15 +6,20 @@ const jsonParser = bodyParser.json()
 class RepositoryController {
 
   constructor(app, sequelize) {
-    const repositoryService = new RepositoryService(sequelize);
+    try {
+      console.log('0000000000000s')
+      const repositoryService = new RepositoryService(sequelize);
 
-    app.get(commonConstant.ENDPOINT.REPOSITORY, repositoryService.fetchAll.bind(repositoryService));
-    app.post(commonConstant.ENDPOINT.REPOSITORY_ADD, jsonParser, repositoryService.addItem.bind(repositoryService));    
-    app.post(commonConstant.ENDPOINT.REPOSITORY_UPDATE, jsonParser, repositoryService.updateItem.bind(repositoryService));        
-    app.post(commonConstant.ENDPOINT.REPOSITORY_REMOVE, repositoryService.remove.bind(repositoryService));                
-    app.get(commonConstant.ENDPOINT.SELECTED_REPOSITORY, repositoryService.fetchSelecteds.bind(repositoryService));    
-    app.post(commonConstant.ENDPOINT.SELECTED_REPOSITORY_ADD, repositoryService.addSelected.bind(repositoryService));        
-    app.post(commonConstant.ENDPOINT.SELECTED_REPOSITORY_REMOVE, repositoryService.removeSelected.bind(repositoryService));            
+      app.get(commonConstant.ENDPOINT.REPOSITORY, repositoryService.fetchAll.bind(repositoryService));
+      app.post(commonConstant.ENDPOINT.REPOSITORY_ADD, jsonParser, repositoryService.addItem.bind(repositoryService));    
+      app.post(commonConstant.ENDPOINT.REPOSITORY_UPDATE, jsonParser, repositoryService.updateItem.bind(repositoryService));        
+      app.post(commonConstant.ENDPOINT.REPOSITORY_REMOVE, repositoryService.remove.bind(repositoryService));                
+      app.get(commonConstant.ENDPOINT.SELECTED_REPOSITORY, repositoryService.fetchSelecteds.bind(repositoryService));    
+      app.post(commonConstant.ENDPOINT.SELECTED_REPOSITORY_ADD, repositoryService.addSelected.bind(repositoryService));        
+      app.post(commonConstant.ENDPOINT.SELECTED_REPOSITORY_REMOVE, repositoryService.removeSelected.bind(repositoryService));            
+    } catch (error)   {
+      console.log('error aqui : ' + error)
+    }
     
   }
 
