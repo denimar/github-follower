@@ -1,10 +1,10 @@
 # github-follower
 Application used to follow trending GitHub repositories
 
-![alt text](https://raw.githubusercontent.com/denimar/deni-react-dialog/master/deni-react-dialog.gif)
+![alt text](https://raw.githubusercontent.com/denimar/github-follower/master/github-follower.gif)
 
 
-[See ti on Heroku](https://github-follower.herokuapp.com/#/repositories/)
+[See ti on "slow" Heroku](https://github-follower.herokuapp.com/#/repositories/)
 
 
 ## Author
