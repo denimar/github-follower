@@ -16,6 +16,9 @@ Application used to follow trending GitHub repositories
   -GraphQL and GitHub api
   
   -Own technologies:
+  
+    [See on Heroku](https://github-follower.herokuapp.com/#/repositories/)
+  
     [deni-react-modal] (https://github.com/denimar/deni-react-modal)    
     
     [deni-react-dialog] (https://github.com/denimar/deni-react-dialog)
