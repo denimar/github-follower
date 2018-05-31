@@ -7,11 +7,11 @@ Application used to follow trending GitHub repositories
 [See on Heroku](https://github-follower.herokuapp.com/#/repositories/)
 
 ## Technologies
-⋅⋅* Node and Express
-⋅⋅* Vanilla JavaScript, ES7  
-⋅⋅* React  
-⋅⋅* GraphQL and GitHub api  
-⋅⋅* Own technologies:
+* Node and Express
+* Vanilla JavaScript, ES7  
+* React  
+* GraphQL and GitHub api  
+* Own technologies:
 
     [See on Heroku](https://github-follower.herokuapp.com/#/repositories/)
   
