@@ -31,7 +31,11 @@ Application used to follow trending GitHub repositories
     
     [deni-react-grid] (https://github.com/denimar/deni-react-grid)
     
+    [You can use numbers for reference-style link definitions][1]
+    
     
 ## Author
 
 [Denimar de Moraes](http://github.com/denimar) (denimar@gmail.com) is a full-stack developer at Wplex, Florianópolis, Santa Catarina, Brazil.
+
+[1]: http://slashdot.org
