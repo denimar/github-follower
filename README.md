@@ -12,6 +12,7 @@ Application used to follow trending GitHub repositories
 * React  
 * GraphQL and GitHub api  
 * Own React Components:
+
     [deni-react-modal](https://github.com/denimar/deni-react-modal)        
     [deni-react-dialog](https://github.com/denimar/deni-react-dialog)    
     [deni-react-popup-menu](https://github.com/denimar/deni-react-popup-menu)    
@@ -22,6 +23,6 @@ Application used to follow trending GitHub repositories
     
 ## Author
 
-[Denimar de Moraes](http://github.com/denimar) (denimar@gmail.com) is a full-stack developer at Wplex, Florianópolis, Santa Catarina, Brazil.
+[Denimar de Moraes](http://github.com/denimar) (denimar@gmail.com) is a full-stack web developer at Wplex, Florianópolis, Santa Catarina, Brazil.
 
 [1]: http://slashdot.org
