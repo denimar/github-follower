@@ -11,22 +11,14 @@ Application used to follow trending GitHub repositories
 * Vanilla JavaScript, ES7  
 * React  
 * GraphQL and GitHub api  
-* Own technologies:
-
-    [deni-react-modal](https://github.com/denimar/deni-react-modal)    
-    
-    [deni-react-dialog](https://github.com/denimar/deni-react-dialog)
-    
-    [deni-react-popup-menu](https://github.com/denimar/deni-react-popup-menu)
-    
-    [deni-react-popover-selector](https://github.com/denimar/deni-react-popover-selector)
-    
-    [deni-react-popover](https://github.com/denimar/deni-react-popover)
-    
+* Own React Components:
+    [deni-react-modal](https://github.com/denimar/deni-react-modal)        
+    [deni-react-dialog](https://github.com/denimar/deni-react-dialog)    
+    [deni-react-popup-menu](https://github.com/denimar/deni-react-popup-menu)    
+    [deni-react-popover-selector](https://github.com/denimar/deni-react-popover-selector)    
+    [deni-react-popover](https://github.com/denimar/deni-react-popover)    
     [deni-react-grid](https://github.com/denimar/deni-react-grid)
-    
-    [You can use numbers for reference-style link definitions][1]
-    
+ * Heroku   
     
 ## Author
 
