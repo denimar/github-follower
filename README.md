@@ -4,7 +4,7 @@ Application used to follow trending GitHub repositories
 ![alt text](https://raw.githubusercontent.com/denimar/github-follower/master/github-follower.gif)
 
 
-[See on Heroku](https://github-follower.herokuapp.com/#/repositories/)
+[See on Google Cloud](https://cobalt-mind-205917.appspot.com/#/repositories)
 
 ## Technologies
 * Node and Express
@@ -19,7 +19,7 @@ Application used to follow trending GitHub repositories
     [deni-react-popover-selector](https://github.com/denimar/deni-react-popover-selector)    
     [deni-react-popover](https://github.com/denimar/deni-react-popover)    
     [deni-react-grid](https://github.com/denimar/deni-react-grid)
- * Heroku   
+ * Google Cloud
     
 ## Author
 
