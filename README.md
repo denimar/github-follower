@@ -4,7 +4,7 @@ Application used to follow trending GitHub repositories
 ![alt text](https://raw.githubusercontent.com/denimar/github-follower/master/github-follower.gif)
 
 
-[See on Google Cloud](https://cobalt-mind-205917.appspot.com/#/repositories)
+[See on Google Cloud](http://35.237.148.217/#/repositories)
 
 ## Technologies
 * Node and Express
