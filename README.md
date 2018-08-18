@@ -4,7 +4,7 @@ Application used to follow trending GitHub repositories
 ![alt text](https://raw.githubusercontent.com/denimar/github-follower/master/github-follower.gif)
 
 
-[See on Google Cloud](http://35.237.148.217/#/repositories)
+[See on Heroku](https://github-follower.herokuapp.com/#/repositories)
 
 ## Technologies
 * Node and Express
