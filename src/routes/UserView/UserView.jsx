@@ -7,7 +7,7 @@ class UserView extends React.Component {
     return (
       <div className="user-view-container">
         Under Development...
-        User view will be Here.
+        User view will be Here. v0.0.0.2
       </div>
     )
   }
