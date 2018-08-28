@@ -15,11 +15,6 @@ class RepositoryPanel extends React.Component {
     this.state = {
       dashboardIndex: 1,
       repositoryInfo: {},
-      repositoryVersion: '',
-      commitsTotalCount: 0,
-      openPullRequestsTotalCount: 0,
-      openIssuesTotalCount: 0,
-      closedIssuesTotalCount: 0,
     }
   }
 
@@ -29,21 +24,46 @@ class RepositoryPanel extends React.Component {
     this.setState({ repositoryInfo })
   }
 
-  componentWillReceiveProps(newProps) {
-    if (newProps.data.repositoryOwner) {
-      const repo = newProps.data.repositoryOwner.repository;
-      this.setState({
-        repositoryVersion: repo.currentVersionRef.edges.length > 0 ? repo.currentVersionRef.edges[0].node.name : '?',
-        commitsTotalCount: repo.defaultBranchRef.commits.history.totalCount,
-        openPullRequestsTotalCount: repo.openPullRequests.totalCount,
-        mergedPullRequestsTotalCount: repo.mergedPullRequests.totalCount,
-        openIssuesTotalCount: repo.openIssues.totalCount,
-        closedIssuesTotalCount: repo.closedIssues.totalCount,
-      })
-    }
-  }
-
   render() {
+    const repositoryOwner = this.props.data.repositoryOwner || {
+      repository: {
+        repositoryVersion: '',
+        commitsTotalCount: 0,
+        openPullRequestsTotalCount: 0,
+        openIssuesTotalCount: 0,
+        closedIssuesTotalCount: 0,
+        currentVersionRef: {
+          edges: []
+        },
+        defaultBranchRef: {
+          commits: {
+            history: {
+              totalCount: 0
+            }
+          }    
+        },
+        openPullRequests: {
+          totalCount: 0
+        },
+        mergedPullRequests: {
+          totalCount: 0
+        },
+        openIssues: {
+          totalCount: 0
+        },
+        closedIssues: {
+          totalCount: 0
+        }
+      }
+    }
+    const repo = repositoryOwner.repository;
+    const repositoryVersion = repo.currentVersionRef.edges.length > 0 ? repo.currentVersionRef.edges[0].node.name : '?'
+    const commitsTotalCount = repo.defaultBranchRef.commits.history.totalCount
+    const openPullRequestsTotalCount = repo.openPullRequests.totalCount
+    const mergedPullRequestsTotalCount = repo.mergedPullRequests.totalCount
+    const openIssuesTotalCount = repo.openIssues.totalCount
+    const closedIssuesTotalCount = repo.closedIssues.totalCount
+
     let owner = this.state.repositoryInfo.owner || {}
     return (
       <div className="repository-panel-container">
@@ -57,41 +77,41 @@ class RepositoryPanel extends React.Component {
                 { this.props.repository.fullName }
               </span>
               <span className="repository-panel-version" onClick={ this._openLink.bind(this, `https://github.com/${this.props.repository.fullName}/releases`) } >
-                {this.state.repositoryVersion}
+                { repositoryVersion }
               </span>
             </div>
 
             <div className="repository-panel-dashboard-items">
               <div className={'repository-panel-dashboard-item commits' + (this.state.dashboardIndex === DashboardTypeEnum.COMMITS ? ' pressed' : '')} onClick={this._dashboardItemClick.bind(this, DashboardTypeEnum.COMMITS)} >
-                <span className="repository-panel-dashboard-item-number">{this.state.commitsTotalCount}</span>
+                <span className="repository-panel-dashboard-item-number">{ commitsTotalCount }</span>
                 <span className="repository-panel-dashboard-item-desc">Commits</span>
               </div>
             </div>
 
             <div className="repository-panel-dashboard-items">
               <div className={'repository-panel-dashboard-item pull-requests' + (this.state.dashboardIndex === DashboardTypeEnum.OPEN_PULL_REQUESTS ? ' pressed' : '')} onClick={this._setDashboardIndex.bind(this, DashboardTypeEnum.OPEN_PULL_REQUESTS)} >
-                <span className="repository-panel-dashboard-item-number">{this.state.openPullRequestsTotalCount}</span>
+                <span className="repository-panel-dashboard-item-number">{ openPullRequestsTotalCount }</span>
                 <span className="repository-panel-dashboard-item-desc">Open Pull Requests</span>
               </div>
             </div>
 
             <div className="repository-panel-dashboard-items">
               <div className={'repository-panel-dashboard-item pull-requests' + (this.state.dashboardIndex === DashboardTypeEnum.MERGED_PULL_REQUESTS ? ' pressed' : '')} onClick={this._dashboardItemClick.bind(this, DashboardTypeEnum.MERGED_PULL_REQUESTS)} >
-                <span className="repository-panel-dashboard-item-number">{this.state.mergedPullRequestsTotalCount}</span>
+                <span className="repository-panel-dashboard-item-number">{ mergedPullRequestsTotalCount }</span>
                 <span className="repository-panel-dashboard-item-desc">Merged Pull Requests</span>
               </div>
             </div>
 
             <div className="repository-panel-dashboard-items">
               <div className={'repository-panel-dashboard-item issues' + (this.state.dashboardIndex === DashboardTypeEnum.OPEN_ISSUES ? ' pressed' : '')} onClick={this._dashboardItemClick.bind(this, DashboardTypeEnum.OPEN_ISSUES)} >
-                <span className="repository-panel-dashboard-item-number">{this.state.openIssuesTotalCount}</span>
+                <span className="repository-panel-dashboard-item-number">{ openIssuesTotalCount }</span>
                 <span className="repository-panel-dashboard-item-desc">Open Issues</span>
               </div>
             </div>
 
             <div className="repository-panel-dashboard-items">
               <div className={'repository-panel-dashboard-item issues' + (this.state.dashboardIndex === DashboardTypeEnum.CLOSED_ISSUES ? ' pressed' : '')} onClick={this._dashboardItemClick.bind(this, DashboardTypeEnum.CLOSED_ISSUES)} >
-                <span className="repository-panel-dashboard-item-number">{this.state.closedIssuesTotalCount}</span>
+                <span className="repository-panel-dashboard-item-number">{ closedIssuesTotalCount }</span>
                 <span className="repository-panel-dashboard-item-desc">Closed Issues</span>
               </div>
             </div>
